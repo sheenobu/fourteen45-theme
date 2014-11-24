@@ -1,10 +1,10 @@
-name = "purehugo"
-description = "A theme based on the pure css blog layout"
+name = "fourteen45-theme"
+description = "The theme for the fourteen45 website"
 license = "MIT"
-source_repo = "https://github.com/dplesca/purehugo"
+source_repo = "https://github.com/sheenobu/fourteen45-theme"
 tags = ["blog", "purecss"]
 
 [author]
-    name = "dplesca"
-    twitter = "http://twitter.com/dragos_plesca"
-    url = "http://github.com/dplesca"
+    name = "sheenobu"
+    twitter = "http://twitter.com/sheenobu"
+    url = "http://github.com/sheenobu"

@@ -1,8 +1,7 @@
-purehugo
+fourteen45-theme
 ========
 
-hugo theme based on purecss from yahoo
-
+Theme for the fourteen45 website, based on purehugo.
 
 ###Reponsive Images
 
