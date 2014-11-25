@@ -203,3 +203,15 @@ h3 {
     bottom: 0;
   }
 }
+
+.posts-small .post-title {
+  font-size: 90%;
+}
+.content h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.content ul {
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
