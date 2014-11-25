@@ -10,8 +10,15 @@
         {{end}}
       </h2>
     </hgroup>
-    <h4 style="padding-top: 8px; padding-bottom: 8px; margin: 0">members</h4>
+    <p>
+      <h4 style="padding-top: 8px; padding-bottom: 0px; margin: 0">about</h4>
+      fourteen45 is a small
+      group of developers
+      located in and around metro Atlanta.
+    </p>
 
+
+    <h4 style="padding-top: 8px; padding-bottom: 8px; margin: 0">members</h4>
     <nav class="nav">
       <ul class="nav-list">
         {{ range $index, $element := .Site.Params.People }}
@@ -23,5 +30,22 @@
         {{ end }}
       </ul>
     </nav>
+
+    <p>
+      <h4 style="padding-top: 8px; padding-bottom: 0px; margin: 0">services</h4>
+      <ul  class="nav-list">
+        <li>hosting</li>
+        <li>consulting</li>
+        <li>development</li>
+      </ul>
+    </p>
+
+    <p>
+      <h4 style="padding-top: 8px; padding-bottom: 0px; margin: 0">contact</h4>
+      <ul class="nav-list">
+        <li>example.io</li>
+        <li>example on twitter</li>
+        <li>example@example.com</li>
+      </ul>
   </div>
 </div>
