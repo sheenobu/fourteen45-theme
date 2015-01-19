@@ -11,7 +11,10 @@
         <section class="post">
           <header class="post-header">
 
-            <a href="{{ .Permalink }}" class="post-title">{{ .Title }}</a>
+            <a href="{{ .Permalink }}" class="post-title">
+              <i class="fa fa-{{ .Params.style }}"></i>
+              {{ .Title }}
+            </a>
 
             <p class="post-meta">
               {{ if isset .Site.Params.People .Params.author }}
