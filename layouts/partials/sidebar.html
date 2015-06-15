@@ -12,40 +12,14 @@
     </hgroup>
     <p>
       <h4 style="padding-top: 8px; padding-bottom: 0px; margin: 0">about</h4>
-      fourteen45 is a small
-      group of developers
-      located in and around metro Atlanta.
+      {{ with .Site.Params.About }}
+      {{.}}
+      {{ else }}
+      About Section
+      {{end}}
     </p>
 
+    {{ template "partials/sidebar_extra.html" . }}
 
-    <h4 style="padding-top: 8px; padding-bottom: 8px; margin: 0">members</h4>
-    <nav class="nav">
-      <ul class="nav-list">
-        {{ range $index, $element := .Site.Params.People }}
-        <li class="nav-item">
-          <a class="pure-button" href="/{{$index}}" style="margin: 0px; width: 36px; height: 36px; padding: 0px;">
-            <img style="width: 32px; height: 32px;" src="{{ $element.Icon }}" alt="{{ $element.Name }}"/>
-          </a>
-        </li>
-        {{ end }}
-      </ul>
-    </nav>
-
-    <p>
-      <h4 style="padding-top: 8px; padding-bottom: 0px; margin: 0">services</h4>
-      <ul  class="nav-list">
-        <li>hosting</li>
-        <li>consulting</li>
-        <li>development</li>
-      </ul>
-    </p>
-
-    <p>
-      <h4 style="padding-top: 8px; padding-bottom: 0px; margin: 0">contact</h4>
-      <ul class="nav-list">
-        <li>example.io</li>
-        <li>example on twitter</li>
-        <li>example@example.com</li>
-      </ul>
   </div>
 </div>
