@@ -74,6 +74,7 @@ h3 {
 }
 .brand-title a{
   color:#fff;
+  text-decoration: underline white;
 }
 .brand-title a:hover{
   text-decoration: none;
