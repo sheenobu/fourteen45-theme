@@ -9,24 +9,29 @@
 
 
       <header>
-      <h1>Recent Activity</h1>
-
+		  <h1>Recent Activity</h1>
       </header>
+
+      <!-- A wrapper for all the blog posts -->
       <div class="posts">
         {{ range .Data.Pages }}
-        <h1 class="content-subhead">{{ .Date.Format "02 Jan 2006, 15:04" }}</h1>
         <section class="post">
           <header class="post-header">
 
-            <a href="{{ .Permalink }}" class="post-title">
+			<a href="{{ .Permalink }}" class="post-title" style="font-size: 120%">
               <i class="fa fa-{{ .Params.style }}"></i>
-
               {{ .Title }}
             </a>
-
-            <p class="post-meta">
-
-              {{ if isset .Site.Params.People .Params.author }}
+            {{ if isset .Params "categories" }}
+            {{ range .Params.categories }}
+            <a class="post-category post-category-{{ . }}"
+            href="/categories/{{ . | urlize }}">
+            {{ . }}
+             </a>
+             {{ end }}
+            <p class="post-meta" style="margin: 5px;">
+			  {{ .Date.Format "02 Jan 2006, 15:04" }}
+		      {{ if isset .Site.Params.People .Params.author }}
 
               <strong class="post-author">
                 <img style="margin-top: 8px; float: left; width: 16px; height: 16px;"
@@ -39,21 +44,17 @@
             </strong>
 
             {{ end }}
-            {{ if isset .Params "categories" }}
-            under
-            {{ range .Params.categories }}
-            <a class="post-category post-category-{{ . }}"
-            href="/categories/{{ . | urlize }}">
-            {{ . }}
-          </a>
-          {{ end }}
-          {{ end }}
+         {{ end }}
         </p>
       </header>
 
+      <div class="post-description" style="padding-top: 3px;padding-left: 20px;">
+        {{ .Description }}
+      </div>
     </section>
     {{ end }}
-  </div>
+
+	</div>
   {{ template "theme/partials/footer.html" . }}
 </div>
 </div>
