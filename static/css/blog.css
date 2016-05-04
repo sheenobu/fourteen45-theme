@@ -27,7 +27,7 @@ html, button, input, select, textarea,
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
 }
 a:hover,
 a:focus {
@@ -134,9 +134,6 @@ h3 {
   margin: 0.4em 0;
   font-family: "Oxygen", sans-serif;
   font-weight: bold;
-}
-.post-title:hover{
-  text-decoration: none;
 }
 .post-avatar {
   border-radius: 50px;
